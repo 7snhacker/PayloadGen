@@ -1,4 +1,5 @@
 import os
+os.system("clear")
 payload = input("Payload type to listen hem windows or android ? ")
 os.system("ifconfig")
 ip = input("Your ip ? ")
