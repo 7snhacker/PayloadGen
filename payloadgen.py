@@ -1,5 +1,7 @@
 import os
 os.system("clear")
+os.system("apt-get install metasploit -y")
+os.system("clear")
 print("""
 ███████╗███████╗███╗   ██╗██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
 ╚════██║██╔════╝████╗  ██║██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
@@ -18,8 +20,6 @@ print("""
 ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝ ╚══════╝╚═╝  ╚═══╝
 
 """)
-os.system("apt-get install metasploit -y")
-os.system("clear")
 payload = input("payload type android or windows ? ")
 os.system("ifconfig")
 ip = input("Your ip addres : ")
